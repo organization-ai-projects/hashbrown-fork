@@ -36,7 +36,6 @@ redundant_else = "allow"
 
 [dependencies]
 # For the default hasher
-foldhash = { version = "0.2.0", default-features = false, optional = true }
 
 # For external trait impls
 rayon = { version = "1.9.0", optional = true }
@@ -82,7 +81,6 @@ default = [
 
 # Enables use of nightly features. This is only guaranteed to work on the latest
 # version of nightly Rust.
-nightly = ["foldhash?/nightly", "bumpalo/allocator_api"]
 
 # Enables the RustcEntry API used to provide the standard library's Entry API.
 rustc-internal-api = []
@@ -96,10 +94,8 @@ serde = ["dep:serde_core", "dep:serde"]
 # Enables the deprecated RawEntry API.
 raw-entry = []
 
-# Provides a default hasher. Currently this is foldhash but this is subject to
 # change in the future. Note that the default hasher does *not* provide HashDoS
 # resistance, unlike the one in the standard library.
-default-hasher = ["dep:foldhash"]
 
 # Enables usage of `#[inline]` on far more functions than by default in this
 # crate. This may lead to a performance increase but often comes at a compile
