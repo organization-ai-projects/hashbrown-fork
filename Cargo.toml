@@ -78,14 +78,11 @@ default = [
   "raw-entry",
 ]
 
-# Enables use of nightly features. This is only guaranteed to work on the latest
-# version of nightly Rust.
 
 # Enables the RustcEntry API used to provide the standard library's Entry API.
 rustc-internal-api = []
 
 # Internal feature used when building as part of the standard library.
-rustc-dep-of-std = ["nightly", "core", "alloc", "rustc-internal-api"]
 
 # Enables serde support.
 serde = ["dep:serde_core", "dep:serde"]
@@ -102,5 +99,4 @@ raw-entry = []
 inline-more = []
 
 [package.metadata.docs.rs]
-features = ["nightly", "rayon", "serde", "raw-entry"]
 rustdoc-args = ["--generate-link-to-definition"]
