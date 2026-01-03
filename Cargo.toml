@@ -72,7 +72,6 @@ libc = "0.2.155"
 
 [features]
 default = [
-  "default-hasher",
   "inline-more",
   "allocator-api2",
   "equivalent",
